@@ -4,7 +4,6 @@
 #include "imu_tk/calibration.h"
 #include "imu_tk/filters.h"
 #include "imu_tk/integration.h"
-#include "imu_tk/visualization.h"
 
 using namespace std;
 using namespace imu_tk;

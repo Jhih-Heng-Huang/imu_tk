@@ -58,9 +58,9 @@ target_link_libraries( test_imu_calib ${IMU_TK_LIBS})
 set_target_properties( test_imu_calib PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
 
 
-add_executable(test_integration apps/test_integration.cpp)
-target_link_libraries( test_integration ${IMU_TK_LIBS})
+# add_executable(test_integration apps/test_integration.cpp)
+# target_link_libraries( test_integration ${IMU_TK_LIBS})
                        
-set_target_properties( test_integration PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
+# set_target_properties( test_integration PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
 
 endif( BUILD_IMU_TK_EXAMPLES )
