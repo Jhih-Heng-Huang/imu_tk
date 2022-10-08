@@ -28,6 +28,8 @@
 
 #pragma once
 
+#define GLOG_NO_ABBREVIATED_SEVERITIES
+
 #include <Eigen/Core>
 #include <ceres/rotation.h>
 

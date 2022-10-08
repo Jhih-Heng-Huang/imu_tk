@@ -29,7 +29,6 @@
 #include "imu_tk/calibration.h"
 #include "imu_tk/filters.h"
 #include "imu_tk/integration.h"
-#include "imu_tk/visualization.h"
 
 #include <limits>
 #include <iostream>
@@ -163,7 +162,7 @@ template <typename _T>
   Eigen::Matrix<_T, 3, 1> acc_variance = dataVariance( acc_samples, init_static_interval );
   _T norm_th = acc_variance.norm();
 
-  _T min_cost = std::numeric_limits< _T >::max();
+  _T min_cost = (std::numeric_limits< _T >::max)();
   int min_cost_th = -1;
   std::vector< double > min_cost_calib_params;
   
@@ -255,8 +254,8 @@ template <typename _T>
   
   if(verbose_output_) 
   {
-    Plot plot;
-    plot.plotIntervals( calib_acc_samples_, min_cost_static_intervals_);
+    // Plot plot;
+    // plot.plotIntervals( calib_acc_samples_, min_cost_static_intervals_);
     
     cout<<"Accelerometers calibration: Better calibration obtained using threshold multiplier "<<min_cost_th
         <<" with residual "<<min_cost<<endl
@@ -266,7 +265,7 @@ template <typename _T>
         <<1.0/acc_calib_.scaleY()<<endl
         <<1.0/acc_calib_.scaleZ()<<endl;
         
-    waitForKey();
+    // waitForKey();
   }
   
   return true;
